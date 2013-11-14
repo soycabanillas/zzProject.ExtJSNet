@@ -1,0 +1,6 @@
+[submodule "zzProject.MVCExtender"]
+	path = zzProject.MVCExtender
+	url = http://github.com/soycabanillas/zzProject.MVCExtender
+[submodule "zzProject.Utils"]
+	path = zzProject.Utils
+	url = http://github.com/soycabanillas/zzProject.Utils

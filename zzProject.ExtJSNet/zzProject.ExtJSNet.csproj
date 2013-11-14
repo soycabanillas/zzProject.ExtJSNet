@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3532519-C1B4-4B3A-8FFF-763EB466D872}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>zzProject.ExtJSNet</RootNamespace>
+    <AssemblyName>zzProject.ExtJSNet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="ExtJS\ClassesEx\Custom\data\ODataStore.cs" />
+    <Compile Include="ExtJS\ClassesEx\Custom\data\proxy\ODataProxy.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\AbstractComponent.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Base.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\Ext.data.ArrayStore.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\Ext.data.Field.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\Ext.data.Model.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\Ext.data.NodeInterface.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\Ext.data.Store.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\IStore.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\ITreeStore.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\Proxy\ProxyBase.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\Proxy\ServerProxy.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\TreeArrayStore.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\TreeODataStore.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Data\TreeStoreBase.cs" />
+    <Compile Include="ExtJS\ClassesEx\Ext\Element.cs" />
+    <Compile Include="ExtJS\ClassesEx\HTMLElement.cs" />
+    <Compile Include="ExtJS\ClassesOld\Component.cs" />
+    <Compile Include="ExtJS\ClassesOld\CustomJsonConverters\IDictionary_object_object_JsonSerializable.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\ArrayStore.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\Field.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\IStore.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\ITreeStore.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\Model.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\NodeInterface.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\ODataStore.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\Proxy\IProxy.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\Proxy\ODataProxy.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\Proxy\ProxyBase.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\Proxy\ServerProxy.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\StoreBase.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\TreeArrayStore.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\TreeODataStore.cs" />
+    <Compile Include="ExtJS\ClassesOld\Data\TreeStoreBase.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\CheckboxEditor.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\ComboboxEditor.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\ComboboxStore\ComboboxLocalStore.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\ComboboxStore\ComboboxRemoteStore.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\ComboboxStore\ComboboxStoreBase.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\ComboboxStore\IComboboxStore.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\DateEditor.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\EditorBase.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\IEditor.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\NumberEditor.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\TextEditor.cs" />
+    <Compile Include="ExtJS\ClassesOld\Form\Field\TimeEditor.cs" />
+    <Compile Include="ExtJS\ClassesOld\Grid\Column\Action.cs" />
+    <Compile Include="ExtJS\ClassesOld\Grid\Column\Boolean.cs" />
+    <Compile Include="ExtJS\ClassesOld\Grid\Column\Column.cs" />
+    <Compile Include="ExtJS\ClassesOld\Grid\Column\Columns.cs" />
+    <Compile Include="ExtJS\ClassesOld\Grid\Column\Date.cs" />
+    <Compile Include="ExtJS\ClassesOld\Grid\Column\IColumn.cs" />
+    <Compile Include="ExtJS\ClassesOld\Grid\Column\Number.cs" />
+    <Compile Include="ExtJS\ClassesOld\Grid\Column\TreeColumn.cs" />
+    <Compile Include="ExtJS\ClassesOld\Grid\Panel.cs" />
+    <Compile Include="ExtJS\ClassesOld\JsonCodeBlock.cs" />
+    <Compile Include="ExtJS\ClassesOld\Params\IParam.cs" />
+    <Compile Include="ExtJS\ClassesOld\Params\ParamBase.cs" />
+    <Compile Include="ExtJS\ClassesOld\Params\ParamsCollection.cs" />
+    <Compile Include="ExtJS\ClassesOld\Relations\ChildrenCollection.cs" />
+    <Compile Include="ExtJS\ClassesOld\Relations\ChildrenRelation.cs" />
+    <Compile Include="ExtJS\ClassesOld\Tree\Panel.cs" />
+    <Compile Include="ExtJS\ClassesOld\WriteOnlyJsonConverter.cs" />
+    <Compile Include="ExtJS\Class\Ext.AbstractComponent.cs" />
+    <Compile Include="ExtJS\Class\Ext.AbstractManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.AbstractPlugin.cs" />
+    <Compile Include="ExtJS\Class\Ext.Action.cs" />
+    <Compile Include="ExtJS\Class\Ext.Ajax.cs" />
+    <Compile Include="ExtJS\Class\Ext.app.Application.cs" />
+    <Compile Include="ExtJS\Class\Ext.app.Controller.cs" />
+    <Compile Include="ExtJS\Class\Ext.app.domain.Component.cs" />
+    <Compile Include="ExtJS\Class\Ext.app.domain.Controller.cs" />
+    <Compile Include="ExtJS\Class\Ext.app.domain.Direct.cs" />
+    <Compile Include="ExtJS\Class\Ext.app.domain.Global.cs" />
+    <Compile Include="ExtJS\Class\Ext.app.domain.Store.cs" />
+    <Compile Include="ExtJS\Class\Ext.app.EventBus.cs" />
+    <Compile Include="ExtJS\Class\Ext.app.EventDomain.cs" />
+    <Compile Include="ExtJS\Class\Ext.Array.cs" />
+    <Compile Include="ExtJS\Class\Ext.Base.cs" />
+    <Compile Include="ExtJS\Class\Ext.button.Button.cs" />
+    <Compile Include="ExtJS\Class\Ext.button.Cycle.cs" />
+    <Compile Include="ExtJS\Class\Ext.button.Manager.cs" />
+    <Compile Include="ExtJS\Class\Ext.button.Split.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.axis.Abstract.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.axis.Axis.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.axis.Category.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.axis.Gauge.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.axis.Numeric.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.axis.Radial.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.axis.Time.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.Callout.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.Chart.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.Highlight.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.Label.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.Legend.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.LegendItem.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.Mask.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.MaskLayer.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.Navigation.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.series.Area.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.series.Bar.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.series.Cartesian.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.series.Column.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.series.Gauge.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.series.Line.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.series.Pie.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.series.Radar.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.series.Scatter.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.series.Series.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.Shape.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.theme.Base.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.theme.Theme.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.Tip.cs" />
+    <Compile Include="ExtJS\Class\Ext.chart.TipSurface.cs" />
+    <Compile Include="ExtJS\Class\Ext.Class.cs" />
+    <Compile Include="ExtJS\Class\Ext.ClassManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.Component.cs" />
+    <Compile Include="ExtJS\Class\Ext.ComponentLoader.cs" />
+    <Compile Include="ExtJS\Class\Ext.ComponentManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.ComponentQuery.cs" />
+    <Compile Include="ExtJS\Class\Ext.container.AbstractContainer.cs" />
+    <Compile Include="ExtJS\Class\Ext.container.ButtonGroup.cs" />
+    <Compile Include="ExtJS\Class\Ext.container.Container.cs" />
+    <Compile Include="ExtJS\Class\Ext.container.DockingContainer.cs" />
+    <Compile Include="ExtJS\Class\Ext.container.Monitor.cs" />
+    <Compile Include="ExtJS\Class\Ext.container.Viewport.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.AbstractStore.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.ArrayStore.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.association.Association.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.association.BelongsTo.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.association.HasMany.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.association.HasOne.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.Batch.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.BufferStore.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.Connection.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.DirectStore.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.Errors.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.Field.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.flash.BinaryXhr.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.Group.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.IdGenerator.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.JsonP.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.JsonPStore.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.JsonStore.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.Model.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.NodeInterface.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.NodeStore.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.Operation.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.PageMap.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.proxy.Ajax.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.proxy.Client.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.proxy.Direct.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.proxy.JsonP.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.proxy.LocalStorage.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.proxy.Memory.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.proxy.Proxy.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.proxy.Rest.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.proxy.Server.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.proxy.SessionStorage.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.proxy.WebStorage.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.reader.Array.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.reader.Json.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.reader.Reader.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.reader.Xml.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.Request.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.ResultSet.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.SequentialIdGenerator.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.SortTypes.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.Store.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.StoreManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.Tree.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.TreeModel.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.TreeStore.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.Types.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.UuidGenerator.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.validations.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.writer.Json.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.writer.Writer.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.writer.Xml.cs" />
+    <Compile Include="ExtJS\Class\Ext.data.XmlStore.cs" />
+    <Compile Include="ExtJS\Class\Ext.Date.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DD.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DDProxy.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DDTarget.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DragDrop.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DragDropElement.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DragDropManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DragDropManager.ElementWrapper.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DragSource.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DragTracker.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DragZone.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DropTarget.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.DropZone.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.Registry.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.ScrollManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.dd.StatusProxy.cs" />
+    <Compile Include="ExtJS\Class\Ext.direct.Event.cs" />
+    <Compile Include="ExtJS\Class\Ext.direct.ExceptionEvent.cs" />
+    <Compile Include="ExtJS\Class\Ext.direct.JsonProvider.cs" />
+    <Compile Include="ExtJS\Class\Ext.direct.Manager.cs" />
+    <Compile Include="ExtJS\Class\Ext.direct.PollingProvider.cs" />
+    <Compile Include="ExtJS\Class\Ext.direct.Provider.cs" />
+    <Compile Include="ExtJS\Class\Ext.direct.RemotingEvent.cs" />
+    <Compile Include="ExtJS\Class\Ext.direct.RemotingMethod.cs" />
+    <Compile Include="ExtJS\Class\Ext.direct.RemotingProvider.cs" />
+    <Compile Include="ExtJS\Class\Ext.direct.Transaction.cs" />
+    <Compile Include="ExtJS\Class\Ext.dom.AbstractElement.cs" />
+    <Compile Include="ExtJS\Class\Ext.dom.AbstractHelper.cs" />
+    <Compile Include="ExtJS\Class\Ext.dom.AbstractQuery.cs" />
+    <Compile Include="ExtJS\Class\Ext.dom.CompositeElement.cs" />
+    <Compile Include="ExtJS\Class\Ext.dom.CompositeElementLite.cs" />
+    <Compile Include="ExtJS\Class\Ext.dom.Element.cs" />
+    <Compile Include="ExtJS\Class\Ext.dom.Element.Fly.cs" />
+    <Compile Include="ExtJS\Class\Ext.dom.Helper.cs" />
+    <Compile Include="ExtJS\Class\Ext.dom.Layer.cs" />
+    <Compile Include="ExtJS\Class\Ext.dom.Query.cs" />
+    <Compile Include="ExtJS\Class\Ext.DomHelper.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.Color.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.Component.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.CompositeSprite.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.Draw.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.engine.ImageExporter.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.engine.Svg.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.engine.SvgExporter.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.engine.Vml.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.Matrix.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.Sprite.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.SpriteDD.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.Surface.cs" />
+    <Compile Include="ExtJS\Class\Ext.draw.Text.cs" />
+    <Compile Include="ExtJS\Class\Ext.Editor.cs" />
+    <Compile Include="ExtJS\Class\Ext.ElementLoader.cs" />
+    <Compile Include="ExtJS\Class\Ext.enums.Feature.cs" />
+    <Compile Include="ExtJS\Class\Ext.enums.Layout.cs" />
+    <Compile Include="ExtJS\Class\Ext.enums.Plugin.cs" />
+    <Compile Include="ExtJS\Class\Ext.enums.Widget.cs" />
+    <Compile Include="ExtJS\Class\Ext.Error.cs" />
+    <Compile Include="ExtJS\Class\Ext.EventManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.EventObject.cs" />
+    <Compile Include="ExtJS\Class\Ext.flash.Component.cs" />
+    <Compile Include="ExtJS\Class\Ext.FocusManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.action.Action.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.action.DirectLoad.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.action.DirectSubmit.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.action.Load.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.action.StandardSubmit.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.action.Submit.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.Basic.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.CheckboxGroup.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.CheckboxManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Base.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Checkbox.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.ComboBox.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Date.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Display.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Field.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.File.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.FileButton.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Hidden.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.HtmlEditor.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Number.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Picker.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Radio.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Spinner.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Text.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.TextArea.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Time.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.Trigger.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.field.VTypes.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.FieldAncestor.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.FieldContainer.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.FieldSet.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.Label.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.Labelable.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.Panel.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.RadioGroup.cs" />
+    <Compile Include="ExtJS\Class\Ext.form.RadioManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.Function.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.Anim.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.Animator.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.CubicBezier.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.Easing.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.Manager.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.PropertyHandler.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.Queue.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.target.Component.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.target.CompositeElement.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.target.CompositeElementCSS.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.target.CompositeSprite.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.target.Element.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.target.ElementCSS.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.target.Sprite.cs" />
+    <Compile Include="ExtJS\Class\Ext.fx.target.Target.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.CellContext.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.CellEditor.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.column.Action.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.column.Boolean.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.column.CheckColumn.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.column.Column.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.column.Date.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.column.Number.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.column.RowNumberer.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.column.Template.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.ColumnComponentLayout.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.ColumnLayout.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.ColumnManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.feature.AbstractSummary.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.feature.Feature.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.feature.Grouping.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.feature.GroupingSummary.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.feature.GroupStore.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.feature.RowBody.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.feature.RowWrap.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.feature.Summary.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.header.Container.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.header.DragZone.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.header.DropZone.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.locking.HeaderContainer.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.locking.Lockable.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.locking.View.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.Panel.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.plugin.BufferedRenderer.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.plugin.CellEditing.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.plugin.DragDrop.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.plugin.Editing.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.plugin.HeaderReorderer.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.plugin.HeaderResizer.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.plugin.RowEditing.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.plugin.RowExpander.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.property.Grid.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.property.HeaderContainer.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.property.Property.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.property.Store.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.RowEditor.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.RowEditorButtons.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.View.cs" />
+    <Compile Include="ExtJS\Class\Ext.grid.ViewDropZone.cs" />
+    <Compile Include="ExtJS\Class\Ext.Img.cs" />
+    <Compile Include="ExtJS\Class\Ext.is.cs" />
+    <Compile Include="ExtJS\Class\Ext.JSON.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.ClassList.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.Auto.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.Body.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.BoundList.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.Button.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.Component.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.Dock.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.Draw.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.field.ComboBox.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.field.Field.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.field.FieldContainer.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.field.HtmlEditor.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.field.Slider.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.field.Text.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.field.TextArea.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.field.Trigger.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.FieldSet.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.component.ProgressBar.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Absolute.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Accordion.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Anchor.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Auto.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Border.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Box.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.boxOverflow.Menu.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.boxOverflow.None.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.boxOverflow.Scroller.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Card.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.CheckboxGroup.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Column.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Container.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Editor.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Fit.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Form.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.HBox.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.Table.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.container.VBox.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.Context.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.ContextItem.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.Layout.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.SizeModel.cs" />
+    <Compile Include="ExtJS\Class\Ext.layout.SizePolicy.cs" />
+    <Compile Include="ExtJS\Class\Ext.Loader.cs" />
+    <Compile Include="ExtJS\Class\Ext.LoadMask.cs" />
+    <Compile Include="ExtJS\Class\Ext.menu.CheckItem.cs" />
+    <Compile Include="ExtJS\Class\Ext.menu.ColorPicker.cs" />
+    <Compile Include="ExtJS\Class\Ext.menu.DatePicker.cs" />
+    <Compile Include="ExtJS\Class\Ext.menu.Item.cs" />
+    <Compile Include="ExtJS\Class\Ext.menu.KeyNav.cs" />
+    <Compile Include="ExtJS\Class\Ext.menu.Manager.cs" />
+    <Compile Include="ExtJS\Class\Ext.menu.Menu.cs" />
+    <Compile Include="ExtJS\Class\Ext.menu.Separator.cs" />
+    <Compile Include="ExtJS\Class\Ext.MessageBox.cs" />
+    <Compile Include="ExtJS\Class\Ext.ModelManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.Number.cs" />
+    <Compile Include="ExtJS\Class\Ext.Object.cs" />
+    <Compile Include="ExtJS\Class\Ext.panel.AbstractPanel.cs" />
+    <Compile Include="ExtJS\Class\Ext.panel.DD.cs" />
+    <Compile Include="ExtJS\Class\Ext.panel.Header.cs" />
+    <Compile Include="ExtJS\Class\Ext.panel.Panel.cs" />
+    <Compile Include="ExtJS\Class\Ext.panel.Proxy.cs" />
+    <Compile Include="ExtJS\Class\Ext.panel.Table.cs" />
+    <Compile Include="ExtJS\Class\Ext.panel.Tool.cs" />
+    <Compile Include="ExtJS\Class\Ext.perf.Accumulator.cs" />
+    <Compile Include="ExtJS\Class\Ext.perf.Monitor.cs" />
+    <Compile Include="ExtJS\Class\Ext.picker.Color.cs" />
+    <Compile Include="ExtJS\Class\Ext.picker.Date.cs" />
+    <Compile Include="ExtJS\Class\Ext.picker.Month.cs" />
+    <Compile Include="ExtJS\Class\Ext.picker.Time.cs" />
+    <Compile Include="ExtJS\Class\Ext.PluginManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.ProgressBar.cs" />
+    <Compile Include="ExtJS\Class\Ext.Queryable.cs" />
+    <Compile Include="ExtJS\Class\Ext.resizer.BorderSplitter.cs" />
+    <Compile Include="ExtJS\Class\Ext.resizer.BorderSplitterTracker.cs" />
+    <Compile Include="ExtJS\Class\Ext.resizer.Handle.cs" />
+    <Compile Include="ExtJS\Class\Ext.resizer.Resizer.cs" />
+    <Compile Include="ExtJS\Class\Ext.resizer.ResizeTracker.cs" />
+    <Compile Include="ExtJS\Class\Ext.resizer.Splitter.cs" />
+    <Compile Include="ExtJS\Class\Ext.resizer.SplitterTracker.cs" />
+    <Compile Include="ExtJS\Class\Ext.selection.CellModel.cs" />
+    <Compile Include="ExtJS\Class\Ext.selection.CheckboxModel.cs" />
+    <Compile Include="ExtJS\Class\Ext.selection.DataViewModel.cs" />
+    <Compile Include="ExtJS\Class\Ext.selection.Model.cs" />
+    <Compile Include="ExtJS\Class\Ext.selection.RowModel.cs" />
+    <Compile Include="ExtJS\Class\Ext.selection.TreeModel.cs" />
+    <Compile Include="ExtJS\Class\Ext.Shadow.cs" />
+    <Compile Include="ExtJS\Class\Ext.ShadowPool.cs" />
+    <Compile Include="ExtJS\Class\Ext.slider.Multi.cs" />
+    <Compile Include="ExtJS\Class\Ext.slider.Single.cs" />
+    <Compile Include="ExtJS\Class\Ext.slider.Thumb.cs" />
+    <Compile Include="ExtJS\Class\Ext.slider.Tip.cs" />
+    <Compile Include="ExtJS\Class\Ext.state.CookieProvider.cs" />
+    <Compile Include="ExtJS\Class\Ext.state.LocalStorageProvider.cs" />
+    <Compile Include="ExtJS\Class\Ext.state.Manager.cs" />
+    <Compile Include="ExtJS\Class\Ext.state.Provider.cs" />
+    <Compile Include="ExtJS\Class\Ext.state.Stateful.cs" />
+    <Compile Include="ExtJS\Class\Ext.String.cs" />
+    <Compile Include="ExtJS\Class\Ext.supports.cs" />
+    <Compile Include="ExtJS\Class\Ext.tab.Bar.cs" />
+    <Compile Include="ExtJS\Class\Ext.tab.Panel.cs" />
+    <Compile Include="ExtJS\Class\Ext.tab.Tab.cs" />
+    <Compile Include="ExtJS\Class\Ext.Template.cs" />
+    <Compile Include="ExtJS\Class\Ext.tip.QuickTip.cs" />
+    <Compile Include="ExtJS\Class\Ext.tip.QuickTipManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.tip.Tip.cs" />
+    <Compile Include="ExtJS\Class\Ext.tip.ToolTip.cs" />
+    <Compile Include="ExtJS\Class\Ext.toolbar.Fill.cs" />
+    <Compile Include="ExtJS\Class\Ext.toolbar.Item.cs" />
+    <Compile Include="ExtJS\Class\Ext.toolbar.Paging.cs" />
+    <Compile Include="ExtJS\Class\Ext.toolbar.Separator.cs" />
+    <Compile Include="ExtJS\Class\Ext.toolbar.Spacer.cs" />
+    <Compile Include="ExtJS\Class\Ext.toolbar.TextItem.cs" />
+    <Compile Include="ExtJS\Class\Ext.toolbar.Toolbar.cs" />
+    <Compile Include="ExtJS\Class\Ext.tree.Column.cs" />
+    <Compile Include="ExtJS\Class\Ext.tree.Panel.cs" />
+    <Compile Include="ExtJS\Class\Ext.tree.plugin.TreeViewDragDrop.cs" />
+    <Compile Include="ExtJS\Class\Ext.tree.View.cs" />
+    <Compile Include="ExtJS\Class\Ext.tree.ViewDragZone.cs" />
+    <Compile Include="ExtJS\Class\Ext.tree.ViewDropZone.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.AbstractMixedCollection.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Animate.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Bindable.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.ClickRepeater.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.ComponentDragger.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Cookies.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.CSS.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.DelayedTask.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.ElementContainer.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Event.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Filter.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Floating.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Format.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Grouper.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.HashMap.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.History.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Inflector.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.KeyMap.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.KeyNav.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.LruCache.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Memento.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.MixedCollection.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Observable.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Offset.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Point.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Positionable.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.ProtoElement.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Queue.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Region.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Renderable.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Sortable.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.Sorter.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.TaskManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.TaskRunner.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.TaskRunner.Task.cs" />
+    <Compile Include="ExtJS\Class\Ext.util.TextMetrics.cs" />
+    <Compile Include="ExtJS\Class\Ext.Version.cs" />
+    <Compile Include="ExtJS\Class\Ext.view.AbstractView.cs" />
+    <Compile Include="ExtJS\Class\Ext.view.BoundList.cs" />
+    <Compile Include="ExtJS\Class\Ext.view.BoundListKeyNav.cs" />
+    <Compile Include="ExtJS\Class\Ext.view.DragZone.cs" />
+    <Compile Include="ExtJS\Class\Ext.view.DropZone.cs" />
+    <Compile Include="ExtJS\Class\Ext.view.NodeCache.cs" />
+    <Compile Include="ExtJS\Class\Ext.view.Table.cs" />
+    <Compile Include="ExtJS\Class\Ext.view.TableLayout.cs" />
+    <Compile Include="ExtJS\Class\Ext.view.View.cs" />
+    <Compile Include="ExtJS\Class\Ext.window.MessageBox.cs" />
+    <Compile Include="ExtJS\Class\Ext.window.Window.cs" />
+    <Compile Include="ExtJS\Class\Ext.WindowManager.cs" />
+    <Compile Include="ExtJS\Class\Ext.XTemplate.cs" />
+    <Compile Include="ExtJS\Class\Ext.XTemplateCompiler.cs" />
+    <Compile Include="ExtJS\Class\Ext.XTemplateParser.cs" />
+    <Compile Include="ExtJS\Class\Ext.ZIndexManager.cs" />
+    <Compile Include="ExtJS\HtmlHelper\Attributes.cs" />
+    <Compile Include="ExtJS\HtmlHelper\ExtJSHtmlHelper.cs" />
+    <Compile Include="ExtJS\HtmlHelper\ModelExtractor.cs" />
+    <Compile Include="ExtJS\ModelMetadata\ExtJSModelMetadata.cs" />
+    <Compile Include="ExtJS\ModelMetadata\IExtJSModelMetadataGetter.cs" />
+    <Compile Include="ExtJS\Services\ExtJSCallbackResult.cs" />
+    <Compile Include="ExtJS\Services\ExtJSStoreResult.cs" />
+    <Compile Include="ExtJS\Services\ExtJSTreeStoreResult.cs" />
+    <Compile Include="ExtJS\Services\NameValueCollectionJsonSerializable.cs" />
+    <Compile Include="ExtJS\Services\NameValueCollectionXMLSerializable.cs" />
+    <Compile Include="ExtJS\Services\Utils\QueryUtils.cs" />
+    <Compile Include="ExtJS\Utils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zzProject.MVCExtender\zzProject.MVCExtender\zzProject.MVCExtender.csproj">
+      <Project>{72e6dbf2-7774-486a-b029-d709b6d30462}</Project>
+      <Name>zzProject.MVCExtender</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zzProject.Utils\zzProject.Utils\zzProject.Utils.csproj">
+      <Project>{71a7bf92-6d5a-458e-82dc-2a915ac9b597}</Project>
+      <Name>zzProject.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
